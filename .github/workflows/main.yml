@@ -31,7 +31,7 @@ jobs:
         pip install jupyter ipykernel
         python -m ipykernel install --user --name lede --display-name "Python (lede)"
     - name: Install all necessary packages
-      run: pip install jupyter lxml pandas requests beautifulsoup4
+      run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib
     - name: Scraping today's data
       run: jupyter nbconvert --to notebook --execute "Homework 07 Scraping with BeautifulSoup.ipynb" --stdout
     - name: Commit and push any changes
